@@ -2,7 +2,7 @@ from vk_api.longpoll import VkEventType
 import random
 import VkBot
 
-token = 'fe86ae7960ef3db6d61df4954f582353194cc8f935f1457d99c73a94a79239d15357b0c65878b558dccac'
+token = ''
 main_bot = VkBot.VKBot(token)
 
 
