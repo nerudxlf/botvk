@@ -87,14 +87,19 @@ def parse_coord(url):
 
 def main():
     """меня для использование использования всего этого"""
-    print("Menu:\n1-update db covid\n2-update coord")
-    num = int(input())
     while True:
+        print("Menu:\n1-update db covid\n2-update coord\n0-exit")
+        num = int(input())
         if num == 1:
-            send_russian_data_to_bd(url_arr[0])
+            print("Вы действительно хотите обновить БД Y/N")
+            string = str(input())
+            if string=="Y":
+                send_russian_data_to_bd(url_arr[0])
         elif num == 2:
             parse_coord(url_arr[2])
-        else:
+        elif num == 0:
+            break
+        elif num == 4:
             parse_symptoms(url_arr[1])
 
 
