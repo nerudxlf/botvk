@@ -10,7 +10,7 @@ def send_messages():
     """цикл работы бота"""
     c_box = False   # флаги переключения
     coord_box = False
-    for event in main_bot.set_longpoll().listen():  # цикл обработки событий от пользователя
+    for event in main_bot.get_longpoll().listen():  # цикл обработки событий от пользователя
         if event.type == VkEventType.MESSAGE_NEW:  # обработка нового ответа
             if event.to_me:
                 request = event.text  # преобразуем в текст
